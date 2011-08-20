@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>Design Patterns Teaching Help System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style2 {font-size: 12px}
+.style3 {font-size: 12px; font-weight: bold; }
+-->
+</style>
+</head>
+<body bgcolor="#999999" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="padding-left:25px" bgcolor="#5678BB" class="logo" height="75" background="images/bg.jpg">
+      DEPTHS - DEsign Patterns Teaching Help System</td>
+  </tr>
+  <tr>
+    <td height="22" colspan="2" bgcolor="#999999">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td height="22" bgcolor="#AEC3E5" class="text" align="center"> <a href="index.html">Home</a>
+            | <a href="architecture.htm">DEPTHS description</a> | <a href="requirementPage.htm">Requirements</a> | <a href="http://goodoldai.org.yu/">GOOD-OLD-AI</a>
+            | <a href="homepage.htm">About author </a> | <a href="links.htm">Links</a> | <a href="main.html">TRY IT
+            </a> | <a href="mailto:jeremycod@yahoo.com">Contact Us</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td bgcolor="#CCCCCC" height="250" valign="top" width="180">
+      <table width="100%" cellspacing="0" cellpadding="8" border="0">
+        <tr>
+          <td height="180" class="text">
+            <p><b>DEPTHS News<br>
+              <br>
+              </b>Current version of DEPTHS is 1.1.0. It is available now for trial.</p>
+            <p>Updated: october 20, 2005. </p>
+            <p>&nbsp;</p>
+          <p><b>DEPTHS description </b></p></td>
+        </tr>
+		<tr>
+		  <td>
+		  <table>
+		  <tr>
+		  <td><a href="architecture.htm">DEPTHS architecture</a>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td>
+		  <a href="student_modeling.htm">Student modeling</a></td>
+		  </tr>
+		  <tr>
+		    <td><a href="curriculum_sequencing.htm">Curriculum sequencing</a></td>
+		    </tr>
+		  <tr>
+		  <td>
+		  <a href="course_org_delivery.htm">Course material organization and delivery</a></td>
+		  </tr>
+
+		  </table>		  </td>
+	    </tr>
+		<tr>
+		  <td> <dl>
+		    <dt>&nbsp;</dt>
+		    </dl>
+		    <p>&nbsp;</p>
+	      <p>&nbsp;</p> <p>&nbsp;</p></td>
+		</tr>
+		<tr>
+		<td><a href="http://goodoldai.org.yu/"><img src="images/good-old-ai-logo.gif" width="160" height="44"></a></td>
+		</tr>
+      </table>
+
+    </td>
+    <td bgcolor="#eeeeee" valign="top">
+      <table width="100%" cellspacing="10" cellpadding="0" align="center" border="0">
+        <tr>
+          <td valign="top" class="text"><img src="images/main6.jpg" width="580" height="89"></td>
+        </tr>
+        <tr>
+          <td valign="top" class="text">
+            <p><span class="title">Welcome to DEPTHS Website!</span></p>
+            <p class="style3">Curriculum sequencing in DEPTHS</p>
+            <p align="justify">Curriculum sequencing is one of the key functions in an intelligent tutoring system. In our approach, curriculum sequencing is realized by <em>Pedagogical module </em> component. <em>Domain model </em> organize instructional units into a hierarchy of topics, lessons, fragments and tests, which are related by prerequisite, part-of and other relationships. <em>Pedagogical module </em> of Design Pattern system is composed of three functional modules: </p>
+            <p align="justify">&#149;&nbsp; Instructional Planner </p>
+            <p align="justify">&#149;&nbsp; Feedback Mechanism </p>
+            <p align="justify">&#149;&nbsp; Assessment Component. </p>
+            <p align="justify">The main purpose of the Instructional Planner is to provide system with instructional plan based on student knowledge of domain matter. Instructional plan is composed of variable sequence of instructional plan items, e.g. a list of topics, a list of lesson, etc. The Instructional Planner is composed of the following components: </p>
+            <p align="justify">&#149;&nbsp; Instructional Plan Generator </p>
+            <p align="justify">&#149;&nbsp; Discourse Planner. </p>
+            <p align="justify">Instructional Plan Generator is responsible for building the instructional plan that will be executed to produce the teaching session; in fact, this component is the real instructional planner. </p>
+            <p align="justify">Discourse Planner is responsible for execution of instructional plan. It also monitors the performance of the student in order to check if the plan is still appropriate. If Discourse Planner decides that the current plan is not valid for the rest of the session then Instructional Plan Generator should consider the current situation and modify the plan in order to take into account the new condition. </p>
+            <p align="justify">If a student is having a session with Tutor for the first time, system gives him a set of exercises and tests before the tutoring process starts. In this way, the student model estimates the new student's background knowledge and determines initial values. After the initial assessment of the student, knowledge system runs in teaching mode. At the beginning of this mode, system develops an initial plan of teaching actions. The plan is based on the contents of the lesson being presented, the relevant pedagogical rules and the student model. The plan represents a detailed outline of the lesson presentation. </p>
+            <p align="justify">At the end of presented topic, the Tutor runs at examination mode. It generates exercises and tests for the student and assesses his knowledge. During the session, system observes and adapts the student progress with the generated course. If the student answers the test items correctly, he progresses along the course and no changes to the course are necessary. However, if the student fails to answer the test items correctly, the system must modify student performances. If the student's performance does not meet expectations, the course is dynamically re-planned. Through dynamic regeneration, each student is able to get a highly personalized course for his needs [<a href="links.htm#ref">6</a>] . </p>
+            <p align="justify">The system must memorize each activity of a user and the system, as well as all assessments of a student, updating the student model. Theses data may be used to prepare instructional plan, as well as to give advice and recommendations for further work [<a href="links.htm#ref">7</a>]. </p>
+            <p align="justify">&nbsp;</p>
+            <table width="100%">
+			<tr>
+			<td width="50%">
+			<div align="left"><span class="text"><a href="student_modeling.htm" class="text"> &lt;&lt; Student modeling </a></span></div>
+			</td>
+			<td>
+			  <div align="right"><span class="text"><a href="course_org_delivery.htm" class="text">Course material organization and delivery &gt;&gt; </a></span></div></td>
+			</tr>
+			</table>
+			<p><span class="text">
+		  &nbsp;</span></p>
+			<p>
+	            <a href="main.html" target="_blank"><img src="images/logo.jpg" width="468" height="60" border="0" vspace="2"></a></p></td>
+        </tr></table>
+    </td>
+  </tr></table>
+  <table width="780" cellspacing="0" cellpadding="0" height="40" border="0" align="center">
+  <tr>
+    <td bgcolor="#AEC3E5" height="24" class="text" align="center"> Copyright &copy;
+      2005 FON - School of Business Administration,  Belgrade. All rights reserved. Designed by <a href="mailto:jeremycod@email.com" target="_blank">Jeremic Zoran</a></td>
+  </tr>
+</table>
+
+</body></html>

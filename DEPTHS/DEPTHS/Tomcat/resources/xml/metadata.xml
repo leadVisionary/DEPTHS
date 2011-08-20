@@ -1,0 +1,2047 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LOM xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="LOM_shema.xsd" concNumber="24">
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Abstract Factory</title>
+            <identifier>c101</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Creational</type>
+            <ordinalNumber>1</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Introduction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u1011</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Intent</title>
+                <identifier>f10111</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Also Known As</title>
+                <identifier>f10112</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10113</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10114</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10115</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10116</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10117</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f10118</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f10119</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f101110</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f101111</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f101112</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Structure</title>
+                <ordinalNumber>2</ordinalNumber>
+                <identifier>u1012</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Structure</title>
+                <identifier>f10121</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Participants and Collaborations</title>
+                <ordinalNumber>3</ordinalNumber>
+                <identifier>u1013</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10131</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10132</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10133</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10134</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10135</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10136</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10137</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10138</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10139</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f101310</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f101311</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f101312</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaborations</title>
+                <identifier>f101313</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaborations</title>
+                <identifier>f101314</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaborations</title>
+                <identifier>f101315</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Consequences</title>
+                <ordinalNumber>4</ordinalNumber>
+                <identifier>u1014</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10141</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10142</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10143</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10144</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10145</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Implementation</title>
+                <ordinalNumber>5</ordinalNumber>
+                <identifier>u1015</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10151</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10152</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10153</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10154</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10155</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10156</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10157</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10158</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10159</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101510</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101511</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101512</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101513</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101514</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101515</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101516</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f101517</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Sample Code</title>
+                <ordinalNumber>6</ordinalNumber>
+                <identifier>u1016</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10161</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10162</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10163</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10164</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10165</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10166</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10167</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Sample Code</title>
+                <identifier>f10168</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Known Uses and Related Patterns</title>
+                <ordinalNumber>7</ordinalNumber>
+                <identifier>u1017</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10171</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10172</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Related Patterns</title>
+                <identifier>f10173</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Related Patterns</title>
+                <identifier>f10174</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Related Patterns</title>
+                <identifier>f10175</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Related Patterns</title>
+                <identifier>f10176</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q1011</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1012</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1014</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q1013</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1013</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q1014</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1017</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q1015</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1015</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1016</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q1017</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1017</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q1018</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1015</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1019</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1013</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q10110</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1017</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10111</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10112</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10113</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10114</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10115</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1011</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10116</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1014</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10117</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1014</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10118</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1014</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10119</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1015</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q101110</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1016</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q101111</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1015</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q101112</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1016</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q101113</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1017</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Builder</title>
+            <identifier>c102</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Creational</type>
+            <ordinalNumber>2</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Introduction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u1021</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Intent</title>
+                <identifier>f10211</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10212</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10213</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10214</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10215</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10216</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Motivation</title>
+                <identifier>f10217</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>3</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f10218</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f10219</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Applicability</title>
+                <identifier>f102110</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Structure</title>
+                <ordinalNumber>2</ordinalNumber>
+                <identifier>u1022</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Structure</title>
+                <identifier>f10221</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Participants and Collaborations</title>
+                <ordinalNumber>3</ordinalNumber>
+                <identifier>u1023</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10230</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10231</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10232</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10233</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10234</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10235</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10236</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10237</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10238</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f10239</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f102310</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Participants</title>
+                <identifier>f102311</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102312</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102313</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102314</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102315</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102316</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102317</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Collaboration</title>
+                <identifier>f102318</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Consequences</title>
+                <ordinalNumber>4</ordinalNumber>
+                <identifier>u1024</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10241</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10242</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10243</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10244</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Consequences</title>
+                <identifier>f10245</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Implementation</title>
+                <ordinalNumber>5</ordinalNumber>
+                <identifier>u1025</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10251</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10252</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10253</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10254</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10255</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10256</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Implementation</title>
+                <identifier>f10257</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Sample Code</title>
+                <ordinalNumber>6</ordinalNumber>
+                <identifier>u1026</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f10261</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Known Uses and Related Patterns</title>
+                <ordinalNumber>7</ordinalNumber>
+                <identifier>u1027</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10271</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10272</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10273</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10274</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10275</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Known Uses</title>
+                <identifier>f10276</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Related Patterns</title>
+                <identifier>f10277</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+            <Fragment>
+                <title>Related Patterns</title>
+                <identifier>f10278</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q1021</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1022</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1023</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1022</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q1024</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1023</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q1025</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1025</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1026</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1027</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1022</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q1028</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1023</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q1029</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1024</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q10210</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1027</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q10211</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1026</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10213</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10212</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10214</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q10215</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1021</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10217</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1022</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10218</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1022</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10216</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1022</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10219</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1023</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10220</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1023</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10221</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1023</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q10222</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1025</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q10223</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1024</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q10224</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1026</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q10225</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1026</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Factory Method</title>
+            <identifier>c103</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Creational</type>
+            <ordinalNumber>3</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u1031</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f10311</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>under the construction</title>
+                <ordinalNumber>2</ordinalNumber>
+                <identifier>u1032</identifier>
+                <difficultyLevel>2</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>fragment</title>
+                <identifier>f10321</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>2</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>under the construction</title>
+                <ordinalNumber>3</ordinalNumber>
+                <identifier>u1033</identifier>
+                <difficultyLevel>2</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>fragment</title>
+                <identifier>f10331</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>2</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>under the construction</title>
+                <ordinalNumber>4</ordinalNumber>
+                <identifier>u1034</identifier>
+                <difficultyLevel>3</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>fragment</title>
+                <identifier>f10341</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>3</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <title>under the construction</title>
+                <ordinalNumber>5</ordinalNumber>
+                <identifier>u1035</identifier>
+                <difficultyLevel>2</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>fragment</title>
+                <identifier>f10351</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>2</detailLevel>
+                <difficultyLevel>2</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q1031</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1031</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1032</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1031</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1033</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1031</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1034</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1031</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1035</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1031</related-to>
+        </Questions>
+        <Questions>
+            <group>1</group>
+            <identifier>q1036</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1031</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1037</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1032</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1038</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1032</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10310</identifier>
+            <difficultyLevel>3</difficultyLevel>
+            <related-to>u1032</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q10311</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1032</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10312</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1033</related-to>
+        </Questions>
+        <Questions>
+            <group>2</group>
+            <identifier>q1039</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1033</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10313</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1033</related-to>
+        </Questions>
+        <Questions>
+            <group>3</group>
+            <identifier>q10314</identifier>
+            <difficultyLevel>5</difficultyLevel>
+            <related-to>u1033</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q10315</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1034</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q10316</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1034</related-to>
+        </Questions>
+        <Questions>
+            <group>4</group>
+            <identifier>q10317</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1034</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q10318</identifier>
+            <difficultyLevel>2</difficultyLevel>
+            <related-to>u1035</related-to>
+        </Questions>
+        <Questions>
+            <group>5</group>
+            <identifier>q10319</identifier>
+            <difficultyLevel>4</difficultyLevel>
+            <related-to>u1035</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Prototype</title>
+            <identifier>c104</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>3</minKnowledgeLevel>
+            <type>Creational</type>
+            <ordinalNumber>4</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u1041</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f10411</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q1041</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1041</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Singleton</title>
+            <identifier>c105</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Creational</type>
+            <ordinalNumber>5</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u1051</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f10511</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q1051</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u1051</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Adapter</title>
+            <identifier>c201</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>6</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2011</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20111</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2011</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2011</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Bridge</title>
+            <identifier>c202</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>7</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2021</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20211</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2021</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2021</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Composite</title>
+            <identifier>c203</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>4</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>8</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2031</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20311</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2031</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2031</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Decorator</title>
+            <identifier>c204</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>9</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2041</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20411</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2041</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2041</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Facade</title>
+            <identifier>c205</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>10</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2051</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20511</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2051</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2051</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Flyweight</title>
+            <identifier>c206</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>2</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>11</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2061</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20611</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2061</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2061</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Proxy</title>
+            <identifier>c207</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>4</minKnowledgeLevel>
+            <type>Structural</type>
+            <ordinalNumber>12</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u2071</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f20711</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q2071</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u2071</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Chain of Responsibility</title>
+            <identifier>c301</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>13</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3011</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30111</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3011</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3011</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Command</title>
+            <identifier>c302</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>2</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>14</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3021</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30211</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3021</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3021</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Interpreter</title>
+            <identifier>c303</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>3</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>15</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3031</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30311</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3031</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3031</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Iterator</title>
+            <identifier>c304</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>4</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>16</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3041</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30411</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3041</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3041</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Mediator</title>
+            <identifier>c305</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>3</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>17</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3051</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f3051</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3051</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3051</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Memento</title>
+            <identifier>c306</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>4</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>18</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3061</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30611</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3061</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3061</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Observer</title>
+            <identifier>c307</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>3</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>19</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3071</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30711</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3071</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3071</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>State</title>
+            <identifier>c308</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>2</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>20</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3081</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30811</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3081</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3081</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Strategy</title>
+            <identifier>c309</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>21</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3091</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f30911</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3091</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3091</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Template Method</title>
+            <identifier>c310</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>1</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>22</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3101</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f31011</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3101</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3101</related-to>
+        </Questions>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <title>Visitor</title>
+            <identifier>c311</identifier>
+            <prerequisite>0</prerequisite>
+            <minKnowledgeLevel>2</minKnowledgeLevel>
+            <type>Behavioral</type>
+            <ordinalNumber>23</ordinalNumber>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <title>Under the construction</title>
+                <ordinalNumber>1</ordinalNumber>
+                <identifier>u3111</identifier>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <title>Under the construction</title>
+                <identifier>f31111</identifier>
+                <type programmingLanguage="any"/>
+                <detailLevel>1</detailLevel>
+                <difficultyLevel>1</difficultyLevel>
+            </Fragment>
+        </Unit>
+        <Questions>
+            <group>1</group>
+            <identifier>q3111</identifier>
+            <difficultyLevel>1</difficultyLevel>
+            <related-to>u3111</related-to>
+        </Questions>
+    </Concept>
+</LOM>

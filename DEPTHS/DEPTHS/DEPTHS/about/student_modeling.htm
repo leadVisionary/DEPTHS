@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Design Patterns Teaching Help System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<style type="text/css">
+<!--
+.style3 {font-size: 12px; font-weight: bold; }
+-->
+</style>
+</head>
+<body bgcolor="#999999" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="padding-left:25px" bgcolor="#5678BB" class="logo" height="75" background="images/bg.jpg">
+      DEPTHS - DEsign Patterns Teaching Help System</td>
+  </tr>
+  <tr>
+    <td height="22" colspan="2" bgcolor="#999999">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td height="22" bgcolor="#AEC3E5" class="text" align="center"> <a href="index.html">Home</a>
+            | <a href="architecture.htm">DEPTHS description</a> | <a href="requirementPage.htm">Requirements</a> | <a href="http://goodoldai.org.yu/">GOOD-OLD-AI</a>
+            | <a href="homepage.htm">About author </a> | <a href="links.htm">Links</a> | <a href="main.html">TRY IT
+            </a> | <a href="mailto:jeremycod@yahoo.com">Contact Us</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td bgcolor="#CCCCCC" height="250" valign="top" width="180">
+      <table width="100%" cellspacing="0" cellpadding="8" border="0">
+        <tr>
+          <td height="180" class="text">
+            <p><b>DEPTHS News<br>
+              <br>
+              </b>Current version of DEPTHS is 1.1.0. It is available now for trial.</p>
+            <p>Updated: october 20, 2005. </p>
+            <p>&nbsp;</p>
+          <p><b>DEPTHS description </b></p></td>
+        </tr>
+		<tr>
+		  <td>
+		  <table>
+		  <tr>
+		  <td width="157"><a href="architecture.htm">DEPTHS architecture</a>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td>
+		  <a href="student_modeling.htm">Student modeling</a></td>
+		  </tr>
+		  <tr>
+		    <td><a href="curriculum_sequencing.htm">Curriculum sequencing</a></td>
+		    </tr>
+		  <tr>
+		  <td>
+		  <a href="course_org_delivery.htm">Course material organization and delivery</a> </td>
+		  </tr>
+
+		  </table>		  </td>
+	    </tr>
+		<tr>
+		  <td> <dl>
+		    <dt>&nbsp;</dt>
+		    </dl>
+		    <p>&nbsp;</p>
+	      <p>&nbsp;</p> <p>&nbsp;</p></td>
+		</tr>
+		<tr>
+		<td><a href="http://goodoldai.org.yu/"><img src="images/good-old-ai-logo.gif" width="160" height="44"></a></td>
+		</tr>
+      </table>
+
+    </td>
+    <td bgcolor="#eeeeee" valign="top">
+      <table width="100%" cellspacing="10" cellpadding="0" align="center" border="0">
+        <tr>
+          <td valign="top" class="text"><img src="images/main6.jpg" width="580" height="89"></td>
+        </tr>
+        <tr>
+          <td valign="top" class="text">
+            <p><span class="title">Welcome to DEPTHS Website!</span></p>
+            <p class="style3">Student modeling in DEPTHS</p>
+            <p align="justify"><em>Student model </em> stores details about the student's current problem-solving state and long-term knowledge progress, essential for adapting the material to the student's characteristics (attributes). In this paper, three categories of student's characteristics are considered [<a href="links.htm#ref">3</a>]: </p>
+            <p align="justify">&#149;&nbsp; Personal data - the student's personal characteristics (name, ID, e-mail ...). </p>
+            <p align="justify">&#149;&nbsp; Performance data - the student's cognitive and individual characteristics, as well as other general long-term characteristics. </p>
+            <p align="justify">&#149;&nbsp; Overlay data - the current level of mastery of design patterns and attributes related to the corresponding elements in the domain model. </p>
+            <p align="justify">There is a number of techniques for modeling student; the most frequently used ones are overlay model, stereotype model, and combination model [<a href="links.htm#ref">4</a>]. <em></em>We used the combination model in the <em>Design Pattern </em> system. </p>
+            <p align="justify">When the student registers to the system for the first time, the newly created student model is initialized with default values from a stereotype. It is the system that selects the stereotype, based on the student's initial interaction with the system. DEPTHS gradually introduces other characteristics into the student model based on the estimated student's knowledge, such as degree of mastery, experience level, learning style, detail level, etc. </p>
+            <p align="justify">Attribute values in the student model are calculated by applying a dedicated group of rules and simple functions from <em>Pedagogical module </em>. The values are updated throughout the session. </p>
+            <p align="justify">At the end of each session, the system stores the student model as an XML document. The next time the student logs onto the system, the data from the stored XML document are used to initialize the student model. </p>
+            <p><strong> Components of the Student model </strong></p>
+            <p align="justify">Several components in the <em>Pedagogical module </em> make decisions about the student model. The decisions are related to the selection of an appropriate topic for the student, selection of an appropriate learning method, curriculum sequencing, and so on. During such processes, the <em>Pedagogical module </em> communicates with the student model in order to get relevant information. </p>
+            <p align="center"><img width="453" height="158" src="images/stud_model.jpg"></p>
+            <p align="center"><strong>Figure 2.</strong> Student model component's: 1-Student model, 2-Student model creation and management components, 3-Student models database </p>
+            <p>The student model has two components (see figure 2): </p>
+            <p align="justify">&#149;&nbsp; Performance model stores data related to the assessment of the student's overall skills, as well as data related to the student's previous knowledge, learning style, etc. </p>
+            <p align="justify">&#149;&nbsp; Teaching history model keeps track of the material presented to the student during the session and the student's mastery of teaching units [<a href="links.htm#ref">5</a>]. </p>
+            <p align="justify">Other three components take part in creating the student model as well (see figure 2): </p>
+            <p align="justify">&#149;&nbsp; Data Reader enables reading-in the student model data from the XML document; it is based on SAX Parser, and is invoked at the beginning of the session. </p>
+            <p align="justify">&#149;&nbsp; Data Writer stores the student model to the XML document at the end of each learning session. </p>
+            <p align="justify">&#149;&nbsp; Session Manager coordinates all other components . </p>
+            <p align="justify">&nbsp;</p>
+            <table width="100%">
+			<tr>
+			<td width="50%">
+			<a href="architecture.htm" class="text"><< DEPTHS architecture</a></td>
+			<td>
+			  <div align="right"><span class="text"><a href="curriculum_sequencing.htm" class="text">Curriculum sequencing >> </a></span></div></td>
+			</tr>
+			</table>
+			<p><span class="text">
+		  &nbsp;</span></p>
+			<p>
+	            <a href="main.html" target="_blank"><img src="images/logo.jpg" width="468" height="60" border="0" vspace="2"></a></p></td>
+        </tr></table>
+    </td>
+  </tr></table>
+  <table width="780" cellspacing="0" cellpadding="0" height="40" border="0" align="center">
+  <tr>
+    <td bgcolor="#AEC3E5" height="24" class="text" align="center"> Copyright &copy;
+      2005 FON - School of Business Administration,  Belgrade. All rights reserved. Designed by <a href="mailto:jeremycod@email.com" target="_blank">Jeremic Zoran</a></td>
+  </tr>
+</table>
+
+</body></html>

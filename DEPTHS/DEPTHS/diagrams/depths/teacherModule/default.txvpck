@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="Vuobnmjen8agbea-cszyvh">
+        <property name="$defaultDiagram" value="true"/>
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="$defaultDiagram" value=""/>
+        <property name="@__options" value="toolbar.group.#DEFAULT.expanded = true &#xA;toolbar.buttonRunCount = 2 &#xA;toolbar.group.pattern.expanded = true &#xA;toolbar.group.ocl.expanded = true &#xA;toolbar.group.note.expanded = true &#xA;scrollX = 0 &#xA;scrollY = 0 &#xA;zoomFactor = 1.0 &#xA;"/>
+        <reference referencedUin="jdt:e_class:src:depths.teacherModule.DatabaseAssistantReader">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="279,292,200,219"/>
+        </reference>
+        <reference referencedUin="jdt:e_class:src:depths.teacherModule.DatabaseTeacherReader">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="440,100,200,173"/>
+        </reference>
+        <reference referencedUin="jdt:e_class:src:depths.teacherModule.DatabaseAssistantWriter">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="279,62,153,125"/>
+        </reference>
+        <reference referencedUin="jdt:e_class:src:depths.teacherModule.DatabaseManager">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="60,80,200,251"/>
+            <reference referencedUin="jdt:l_ast:src:depths.teacherModule.DatabaseManager:dbAssistantReader">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="260,295"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="287,295"/>
+            </reference>
+            <reference referencedUin="jdt:l_ast:src:depths.teacherModule.DatabaseManager:dbAssistantWriter">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="260,109"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="279,109"/>
+            </reference>
+            <reference referencedUin="jdt:l_ast:src:depths.teacherModule.DatabaseManager:dbTeacherReader">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="260,136"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="440,136"/>
+            </reference>
+        </reference>
+        <reference referencedUin="label:clientCardinality:jdt:l_ast:src:depths.teacherModule.DatabaseManager:dbTeacherReader">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="270,117,26,16"/>
+        </reference>
+        <reference referencedUin="label:label:jdt:l_ast:src:depths.teacherModule.DatabaseManager:dbTeacherReader">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="331,117,38,16"/>
+        </reference>
+        <reference referencedUin="label:supplierCardinality:jdt:l_ast:src:depths.teacherModule.DatabaseManager:dbTeacherReader">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="415,117,15,16"/>
+        </reference>
+    </view>
+</nodeSet>

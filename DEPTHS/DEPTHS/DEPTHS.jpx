@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="config" name="autoformat.java.continuationPrefix" value="&quot;        &quot;"/>
+  <property category="config" name="autoformat.java.elseStatementOnNewLine" value="false"/>
+  <property category="config" name="autoformat.java.indentWidth" value="4"/>
+  <property category="config" name="autoformat.java.keepArrayInitialization" value="true"/>
+  <property category="config" name="autoformat.java.keepEndOfLines" value="true"/>
+  <property category="config" name="autoformat.java.maxNumOfEmptyNeightbouringLines" value="1"/>
+  <property category="config" name="autoformat.java.numOfEmptyLinesAfterClass" value="2"/>
+  <property category="config" name="autoformat.java.optimize.imports.numOfClassesToImportOnDemandUse" value="0"/>
+  <property category="config" name="options.umlVersion" value="14"/>
+  <property category="config" name="parser.java.syntax" value="1.3"/>
+  <property category="config" name="project.encoding" value="Cp1252"/>
+  <property category="generalFormatting" name="baseCodeStyle" value="java/Java Standard.codestyle"/>
+  <property category="generalFormatting2" name="blockIndent" value="4"/>
+  <property category="generalFormatting2" name="continuationIndent" value="8"/>
+  <property category="generalFormatting2" name="overrideBasicFormatting" value="1"/>
+  <property category="javaFormatting" name="alignMultilineAssign" value="1"/>
+  <property category="javaFormatting" name="arrayInitDataOnNewLine" value="0"/>
+  <property category="javaFormatting" name="blankLinesAfterClass" value="2"/>
+  <property category="javaFormatting" name="catchOnNewLine" value="0"/>
+  <property category="javaFormatting" name="elseOnNewLine" value="0"/>
+  <property category="javaFormatting" name="extendsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="finallyOnNewLine" value="0"/>
+  <property category="javaFormatting" name="implementsOnNewLine" value="0"/>
+  <property category="javaFormatting" name="indentCase" value="0"/>
+  <property category="javaFormatting" name="packagePrefixGroups" value="java;BLANK_LINE;javax;BLANK_LINE;(*)"/>
+  <property category="javaFormatting" name="preservedBlankLinesInDecl" value="2"/>
+  <property category="javaFormatting" name="spaceBeforeLparen" value="0"/>
+  <property category="javaFormatting" name="whileOnNewLine" value="0"/>
+  <property category="javadoc" name="custom.tags.1" value="todo;a;To Do:"/>
+  <property category="module" name="ProjectConvertedToEnsureModulesHaveSupportedFeatures" value="1"/>
+  <property category="module" name="ProjectConvertedToUseFilesAndDependenciesAsDefaultContent" value="1"/>
+  <property category="module" name="ProjectConvertedToUseProperModuleDefaults" value="1"/>
+  <property category="module" name="last.wizard.module.name" value="DEPTHS"/>
+  <property category="module" name="projectConvertedFromModuleExtensionsToModuleFileTypes" value="1"/>
+  <property category="path" name="DefaultDiagram" value="diagrams"/>
+  <property category="path" name="Diagram" value="diagrams"/>
+  <property category="personality" name="personality" value="com.borland.jbuilder.personality.JBuilderUMLPersonality "/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="BuildTargetOnRun" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="runtime.0" name="ConfigurationName" value="Server"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ServerRunner"/>
+  <property category="runtime.0" name="appserver.parameters" value=""/>
+  <property category="runtime.0" name="appserver.servername" value=""/>
+  <property category="runtime.0" name="appserver.vmparameters" value=""/>
+  <property category="runtime.0" name="custom.init_required" value="0"/>
+  <property category="runtime.0" name="custom.jdk" value="java version 1.5.0-b64"/>
+  <property category="runtime.0" name="custom.override_jdk" value="1"/>
+  <property category="runtime.0" name="custom.override_required" value="1"/>
+  <property category="runtime.0" name="custom.required.1" value="JFreeChartLibrary"/>
+  <property category="runtime.0" name="custom.required.2" value="Servlet"/>
+  <property category="runtime.0" name="custom.required.3" value="FuzzyJ"/>
+  <property category="runtime.0" name="custom.required.4" value="Jdbc-driver"/>
+  <property category="runtime.0" name="custom.required.5" value="Jess lib"/>
+  <property category="runtime.0" name="enabled.services" value="jsp;naming"/>
+  <property category="runtime.0" name="server.arguments" value=""/>
+  <property category="runtime.0" name="server.disableServerClassTracing" value="0"/>
+  <property category="runtime.0" name="server.instance.name" value=""/>
+  <property category="runtime.0" name="server.name" value="Tomcat 5.0"/>
+  <property category="runtime.0" name="server.vmparameters" value=""/>
+  <property category="serverservices" name="WarnedOfLegacyToCurrentServerChange" value="1"/>
+  <property category="serverservices" name="disabled.services" value="jdatastore;sqlj"/>
+  <property category="serverservices" name="single.server.name" value="Tomcat 5.0"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2006"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java version 1.4.2_04-b05"/>
+  <property category="sys" name="JvmVersion" value="1.2"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="JFreeChartLibrary;Servlet;FuzzyJ;Jdbc-driver;Jess lib"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="team" name="ignorePath.0" value="Tomcat"/>
+  <property category="together" name="language" value="java"/>
+  <property category="webModule" name="last.wizard.module.name" value="DEPTHS"/>
+  <node name="DEPTHS" type="WebModuleNode">
+    <property category="archiving" name="archiverClass" value="com.borland.jbuilder.enterprise.module.web.WebModuleArchiver"/>
+    <property category="archiving" name="contentRules.1" value="i:sar"/>
+    <property category="archiving" name="contentRules.10" value="i:opentools"/>
+    <property category="archiving" name="contentRules.11" value="i:png"/>
+    <property category="archiving" name="contentRules.12" value="i:properties"/>
+    <property category="archiving" name="contentRules.13" value="i:au"/>
+    <property category="archiving" name="contentRules.14" value="i:txt"/>
+    <property category="archiving" name="contentRules.15" value="i:ram"/>
+    <property category="archiving" name="contentRules.16" value="i:css"/>
+    <property category="archiving" name="contentRules.17" value="i:wml"/>
+    <property category="archiving" name="contentRules.18" value="i:xmi"/>
+    <property category="archiving" name="contentRules.19" value="i:xul"/>
+    <property category="archiving" name="contentRules.2" value="i:gif"/>
+    <property category="archiving" name="contentRules.20" value="i:xsl"/>
+    <property category="archiving" name="contentRules.3" value="i:html"/>
+    <property category="archiving" name="contentRules.4" value="i:class"/>
+    <property category="archiving" name="contentRules.5" value="i:jnlp"/>
+    <property category="archiving" name="contentRules.6" value="i:js"/>
+    <property category="archiving" name="contentRules.7" value="i:jpg"/>
+    <property category="archiving" name="contentRules.8" value="i:jsp"/>
+    <property category="archiving" name="contentRules.9" value="i:tld"/>
+    <property category="archiving" name="defaultLibraryState" value="3"/>
+    <property category="archiving" name="includeDeps" value="1"/>
+    <property category="archiving" name="libraryStates.1" value="0:Servlet"/>
+    <property category="archiving" name="libraryStates.2" value="0:Tomcat 5.0 Servlet"/>
+    <property category="archiving" name="outPathState" value="4"/>
+    <property category="archiving" name="targetPath" value="DEPTHS.war"/>
+    <property category="archiving" name="usingRules" value="1"/>
+    <property category="module" name="buildModuleArchiveWithModuleNode" value="0"/>
+    <property category="module" name="buildModuleArchiveWithProject" value="0"/>
+    <property category="module" name="directory" value="DEPTHS"/>
+    <property category="module" name="extraDefaultDirectoriesToKeepOnClean.1" value=".cvsignore"/>
+    <property category="module" name="lastServer" value="Tomcat 5.0"/>
+    <property category="module" name="moduleNodeConvertedFromExtensionsToFileTypes" value="1"/>
+    <property category="module" name="moduleNodeConvertedToEnsureHasProperVcsDirCleanRules" value="1"/>
+    <property category="module" name="nodeJBuilderVersion" value="JBuilder 200"/>
+    <property category="module" name="supported.features.1" value="Servlet 2.4"/>
+    <property category="module" name="supported.features.2" value="JSP 2.0"/>
+    <property category="module" name="useModuleSpecificJavaFileNodesToBuild" value="1"/>
+    <property category="web" name="context-root" value="DEPTHS"/>
+    <property category="webModule" name="launch.uri" value="/"/>
+  </node>
+</project>

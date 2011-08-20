@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ENTITY nl "&n;br&e;">
+	<!ENTITY inLine "&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ">
+	<!ENTITY n "&lt;">
+	<!ENTITY e "&gt;">

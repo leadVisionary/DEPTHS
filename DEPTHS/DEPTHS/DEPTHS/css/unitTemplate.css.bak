@@ -1,0 +1,89 @@
+#page{
+left:0px;top:0px;
+}
+#content{
+position:relative;
+margin-left:220px;
+text-align:justify;
+margin-right:50px;
+}
+#content H2{
+color:#006699;
+padding-bottom:0px;
+padding-top:10px;
+font-size:114%;
+}
+#content H3{
+color:#334d55;
+padding-bottom:0px;
+padding-top:10px;
+font-size:100%;
+}
+#navBar{
+position:absolute;
+float:left;
+top:15px;left:10px;width:200px; BACKGROUND-COLOR: #bcc9eb;bottom:5px;
+
+}
+#blank{
+}
+#search{
+text-align:center;
+font-weight:bold;
+}
+#sectionLinks{
+margin-left:10px;
+}
+#sectionLinks A:link {
+}
+#sectionLinks A:visited {
+}
+#sectionLinks A:hover {
+BACKGROUND-COLOR: #dddddd;
+}
+#search{
+}
+#advert{
+}
+#headlines{
+}
+#masthead{
+position:relative;
+margin-left:0px;
+border-bottom:#cccccc 1px solid;
+}
+#previousNextLinks{
+
+
+}
+#story{
+
+}
+#breadCrumb{
+float:left; width:40%;
+}
+#breadCrumb2{
+float:right; width:40%; text-align:right; margin-right:10px;
+}
+
+#buttonsLeft{
+float:left; width:30%;
+}
+#buttonsCenter{
+float:right; width:70%;
+}
+#bellowForm{
+}
+#beforeForm{
+}
+#siteInfo{
+border:#cccccc 1px solid;
+}
+#pageName{
+padding-bottom:10px;
+color:#006699;
+text-align:center;
+}
+#pageName H2{
+font-size:114%;
+}

@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Design Patterns Teaching Help System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style2 {font-size: 12px}
+.style3 {font-size: 12px; font-weight: bold; }
+-->
+</style>
+</head>
+<body bgcolor="#999999" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="padding-left:25px" bgcolor="#5678BB" class="logo" height="75" background="images/bg.jpg">
+      DEPTHS - Design Patterns Teaching Help System</td>
+  </tr>
+  <tr>
+    <td height="22" colspan="2" bgcolor="#999999">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td height="22" bgcolor="#AEC3E5" class="text" align="center"> <a href="index.html">Home</a>
+            | <a href="architecture.htm">DEPTHS description</a> | <a href="requirementPage.htm">Requirements</a> | <a href="http://goodoldai.org.yu/">GOOD-OLD-AI</a>
+            | <a href="homepage.htm">About author </a> | <a href="links.htm">Links</a> | <a href="main.html">TRY IT
+            </a> | <a href="mailto:jeremycod@yahoo.com">Contact Us</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td bgcolor="#CCCCCC" height="250" valign="top" width="180">
+      <table width="100%" cellspacing="0" cellpadding="8" border="0">
+        <tr>
+          <td height="180" class="text">
+            <p><b>DEPTHS News<br>
+              <br>
+              </b>Current version of DEPTHS is 1.1.0. It is available now for trial.</p>
+            <p>Updated: october 20, 2005. </p>
+            <p>&nbsp;</p>
+          <p><b>DEPTHS description </b></p></td>
+        </tr>
+		<tr>
+		  <td>
+		  <table>
+		  <tr>
+		  <td><a href="architecture.htm">DEPTHS architecture</a>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td>
+		  <a href="student_modeling.htm">Student modeling</a></td>
+		  </tr>
+		  <tr>
+		    <td><a href="curriculum_sequencing.htm">Curriculum sequencing</a></td>
+		    </tr>
+		  <tr>
+		  <td>
+		  <a href="course_org_delivery.htm">Course material organization and delivery</a></td>
+		  </tr>
+		  <tr>
+		    <td>&nbsp;</td>
+		    </tr>
+
+		  </table>		  </td>
+	    </tr>
+		<tr>
+		  <td> <dl>
+		    <dt>&nbsp;</dt>
+		    </dl>
+		    <p>&nbsp;</p>
+	      <p>&nbsp;</p> <p>&nbsp;</p></td>
+		</tr>
+		<tr>
+		<td><a href="http://goodoldai.org.yu/"><img src="images/good-old-ai-logo.gif" width="160" height="44"></a></td>
+		</tr>
+      </table>
+
+    </td>
+    <td bgcolor="#eeeeee" valign="top">
+      <table width="100%" cellspacing="10" cellpadding="0" align="center" border="0">
+        <tr>
+          <td valign="top" class="text"><img src="images/main6.jpg" width="580" height="89"></td>
+        </tr>
+        <tr>
+          <td valign="top" class="text">
+            <p><span class="title">Welcome to DEPTHS Website!</span></p>
+            <p class="style3">Course material organization and delivery in DEPTHS </p>
+            <p align="justify">DEPTHS dynamically generates course material by taking into account a specific learning goal and the initial level of the student's knowledge. During the session, system observes and adapts the student progress with the generated course. If the student's performance does not meet expectations, the course is dynamically re-planned. Through dynamic regeneration each student is able to get a highly personalized course for his needs. </p>
+            <p align="justify">DEPTHS provides control over presentation design, by using an explicit presentation separate from contents. Course unit presentation is defined by creating a common template for each class of the ontology (topic, lesson, and test). Templates are defined using a textual language based on Java Server Pages, which allows insertion of the part of the chosen course unit into HTML code. Student interaction with the system is implemented by using HTTP protocol. System uses HTML compatible Web browser on the client side, and Tomcat 4.0 Web Server as JSP container on the server side [<a href="links.htm#ref">8</a>]. </p>
+            <p align="justify">During the session, system observes and adapts the student progress with the generated course. Domain model of DEPTHS is made up of concepts, which correspond to one pattern. Each concept is divided in units – the elementary pieces of domain knowledge. There are a fixed number of units in particular concept, but the size of unit is not fixed. The system uses unit variants technique, which consists of keeping two or more alternative pages with adapted content, e.g. one for each knowledge level: beginner, intermediate and expert. Each unit has an arbitrary number of fragments – a chunk of information that should be presented to the user. The user model and the concept relationships of the domain model provide the information that allows the system to determine which chunk of information should be presented to the user. The chunk of information may also consists of fragment variants, i.e. fragments related by an “or” relationship. </p>
+            <p align="justify">The system provides students with two kinds of navigation through the course material: </p>
+            <p align="justify">&#149;&nbsp; Direct guidance – The student sees only one options to continue with the browsing activity i.e. just one button to navigate to the “next” page is displayed. The destination of the “best” link is determined by the system. </p>
+            <p align="justify">&#149;&nbsp; Link removing – advanced students could choose which topics to learn by selecting appropriate link from content menu, but links that the system considers inappropriate are removed, i.e. they are not longer available. Anchors of these links are replaced by text. </p>
+            <p align="justify">The student has the option to let the Tutor choose the next topic or choosing it himself. In both cases, the student must achieve sufficiently ready score for the topic. The topics are represented in a dependency graph, with links representing the relationship between topics, which include prerequisite and related topic. A student is ready to learn a topic only if he has performed sufficiently well on its prerequisites. </p>
+            <p align="justify">At the end of each topic student has to complete test. If the student fails to give correct answers, the Tutor must provide an alternative learning path to the student, such as a hint. If the learner tries to move on to a new topic before the Tutor feels that the student has explored the current topic sufficiently, the Tutor will generate a warning, suggesting better exploration of the current topic. These warnings also remind the student of the availability of hints. The student can choose either to follow the advice or to move on. </p>
+            <p align="justify">&nbsp;</p>            <p align="justify">&nbsp;</p>
+            <table width="100%">
+			<tr>
+			<td width="50%">
+			<div align="left"><span class="text"><a href="curriculum_sequencing.htm" class="text"> &lt;&lt; Curriculum sequencing </a></span></div>			</td>
+			<td>
+			  <div align="right"></div></td>
+			</tr>
+			</table>
+			<p><span class="text">
+		  &nbsp;</span></p>
+			<p>
+	            <a href="main.html" target="_blank"><img src="images/logo.jpg" width="468" height="60" border="0" vspace="2"></a></p></td>
+        </tr></table>
+    </td>
+  </tr></table>
+  <table width="780" cellspacing="0" cellpadding="0" height="40" border="0" align="center">
+  <tr>
+    <td bgcolor="#AEC3E5" height="24" class="text" align="center"> Copyright &copy;
+      2005 FON - School of Business Administration,  Belgrade. All rights reserved. Designed by <a href="mailto:jeremycod@email.com" target="_blank">Jeremic Zoran</a></td>
+  </tr>
+</table>
+
+</body></html>

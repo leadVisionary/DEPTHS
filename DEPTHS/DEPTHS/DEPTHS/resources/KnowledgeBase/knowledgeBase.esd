@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ESD>
+ <FILES>
+  <FILE>
+   <NAME>PlanningRules.clp</NAME>
+   <OPENED>true</OPENED>
+  </FILE>
+ </FILES>
+ <BREAKPOINTS />
+ <TRACE_FILE>knowledgeBase.tlg</TRACE_FILE>
+ <AUTO_TRACE>true</AUTO_TRACE>
+ <PAGE_FORMAT>0</PAGE_FORMAT>
+ <MODULES>
+  <MODULE>MAIN</MODULE>
+ </MODULES>
+</ESD>
+

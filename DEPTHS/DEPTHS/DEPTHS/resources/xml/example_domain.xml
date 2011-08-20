@@ -1,0 +1,3412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Course SYSTEM "CourseDTD.dtd">
+<Course xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DomainModule_Schema.xsd">
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c101</identifier>
+            <title>Abstract Factory</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1011</identifier>
+                <title>Introduction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10111</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Intent</title>
+                <content>Provide an interface for creating families of related or dependent objects without specifying their concrete classes.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10112</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Also Known As</title>
+                <content>Kit</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10113</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Motivation</title>
+                <content>Consider a user interface toolkit that supports multiple look-and-feel standards, such as Motif and Presentation Manager. Different look-and-feels define different appearances and behaviors for user interface "widgets" like scroll bars, windows, and buttons. To be portable across look-and-feel standards, an application should not hard-code its widgets for a particular look and feel. Instantiating look-and-feel-specific classes of widgets throughout the application makes it hard to change the look and feel later.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10114</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Motivation</title>
+                <content>We can solve this problem by defining an abstract WidgetFactory class that declares an interface for creating each basic kind of widget. There's also an abstract class for each kind of widget, and concrete subclasses implement widgets for specific look-and-feel standards. WidgetFactory's interface has an operation that returns a new widget object for each abstract widget class. Clients call these operations to obtain widget instances, but clients aren't aware of the concrete classes they're using. Thus clients stay independent of the prevailing look and feel.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10115</identifier>
+                <type>picture_middle</type>
+                <detailLevel>2</detailLevel>
+                <title>Motivation</title>
+                <content>AbstractFactory_01</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10116</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Motivation</title>
+                <content>There is a concrete subclass of WidgetFactory for each look-and-feel standard. Each subclass implements the operations to create the appropriate widget for the look and feel. For example, the CreateScrollBar operation on the MotifWidgetFactory instantiates and returns a Motif scroll bar, while the corresponding operation on the PMWidgetFactory returns a scroll bar for Presentation Manager. Clients create widgets solely through the WidgetFactory interface and have no knowledge of the classes that implement widgets for a particular look and feel. In other words, clients only have to commit to an interface defined by an abstract class, not a particular concrete class.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10117</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Motivation</title>
+                <content>A WidgetFactory also enforces dependencies between the concrete widget classes. A Motif scroll bar should be used with a Motif button and a Motif text editor, and that constraint is enforced automatically as a consequence of using a MotifWidgetFactory.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10118</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Applicability</title>
+                <content>Use the Abstract Factory pattern when</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10119</identifier>
+                <type>list2</type>
+                <detailLevel>1</detailLevel>
+                <title>Applicability</title>
+                <content>a system should be independent of how its products are created, composed, and represented. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101110</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Applicability</title>
+                <content>a system should be configured with one of multiple families of products. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101111</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Applicability</title>
+                <content>a family of related product objects is designed to be used together, and you need to enforce this constraint. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101112</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Applicability</title>
+                <content>you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations. 
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1012</identifier>
+                <title>Structure</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10121</identifier>
+                <type>picture_middle</type>
+                <detailLevel>1</detailLevel>
+                <title>Structure</title>
+                <content>AbstractFactory_02</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1013</identifier>
+                <title>Participants and Collaborations</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10131</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content> </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10132</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>AbstractFactory (WidgetFactory) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10133</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>declares an interface for operations that create abstract product objects. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10134</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>ConcreteFactory (MotifWidgetFactory, PMWidgetFactory) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10135</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>implements the operations to create concrete product objects. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10136</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>AbstractProduct (Window, ScrollBar) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10137</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>declares an interface for a type of product object. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10138</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>ConcreteProduct (MotifWindow, MotifScrollBar) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10139</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>defines a product object to be created by the corresponding concrete factory. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101310</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>implements the AbstractProduct interface. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101311</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>Client </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101312</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>uses only interfaces declared by AbstractFactory and AbstractProduct classes. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101313</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaborations</title>
+                <content> </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101314</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaborations</title>
+                <content>Normally a single instance of a ConcreteFactory class is created at run-time. This concrete factory creates product objects having a particular implementation. To create different product objects, clients should use a different concrete factory. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101315</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaborations</title>
+                <content>AbstractFactory defers creation of product objects to its ConcreteFactory subclass. 
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1014</identifier>
+                <title>Consequences</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10141</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>The Abstract Factory pattern has the following benefits and liabilities:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10142</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>1. It isolates concrete classes. The Abstract Factory pattern helps you control the classes of objects that an application creates. Because a factory encapsulates the responsibility and the process of creating product objects, it isolates clients from implementation classes. Clients manipulate instances through their abstract interfaces. Product class names are isolated in the implementation of the concrete factory; they do not appear in client code. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10143</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>2. It makes exchanging product families easy. The class of a concrete factory appears only once in an application?that is, where it's instantiated. This makes it easy to change the concrete factory an application uses. It can use different product configurations simply by changing the concrete factory. Because an abstract factory creates a complete family of products, the whole product family changes at once. In our user interface example, we can switch from Motif widgets to Presentation Manager widgets simply by switching the corresponding factory objects and recreating the interface. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10144</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>3. It promotes consistency among products. When product objects in a family are designed to work together, it's important that an application use objects from only one family at a time. AbstractFactory makes this easy to enforce. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10145</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>4. Supporting new kinds of products is difficult. Extending abstract factories to produce new kinds of Products isn't easy. That's because the AbstractFactory interface fixes the set of products that can be created. Supporting new kinds of products requires extending the factory interface, which involves changing the AbstractFactory class and all of its subclasses. We discuss one solution to this problem in the Implementation section. 
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1015</identifier>
+                <title>Implementation</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10151</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>Here are some useful techniques for implementing the Abstract Factory pattern.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10152</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>1. Factories as singletons. An application typically needs only one instance of a ConcreteFactory per product family. So it's usually best implemented as a Singleton (127). </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10153</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>2. Creating the products. AbstractFactory only declares an interface for creating products. It's up to ConcreteProduct subclasses to actually create them. The most common way to do this is to define a factory method (see Factory Method (107)) for each product. A concrete factory will specify its products by overriding the factory method for each. While this implementation is simple, it requires a new concrete factory subclass for each product family, even if the product families differ only slightly. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10154</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Implementation</title>
+                <content>If many product families are possible, the concrete factory can be implemented using the Prototype (117) pattern. The concrete factory is initialized with a prototypical instance of each product in the family, and it creates a new product by cloning its prototype. The Prototype-based approach eliminates the need for a new concrete factory class for each new product family.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10155</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>Here's a way to implement a Prototype-based factory in Smalltalk. The concrete factory stores the prototypes to be cloned in a dictionary called partCatalog. The method make: retrieves the prototype and clones it:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10156</identifier>
+                <type>code</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>make: partName &lt;br&gt;   ^ (partCatalog at: partName) copy
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10157</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>The concrete factory has a method for adding parts to the catalog.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10158</identifier>
+                <type>code</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>addPart: partTemplate named: partName &lt;br&gt;   partCatalog at: partName put: partTemplate
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10159</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>Prototypes are added to the factory by identifying them with a symbol:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101510</identifier>
+                <type>code</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>aFactory addPart: aPrototype named: #ACMEWidget
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101511</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>A variation on the Prototype-based approach is possible in languages that treat classes as first-class objects (Smalltalk and Objective C, for example). You can think of a class in these languages as a degenerate factory that creates only one kind of product. You can store classes inside a concrete factory that create the various concrete products in variables, much like prototypes. These classes create new instances on behalf of the concrete factory. You define a new factory by initializing an instance of a concrete factory with classes of products rather than by subclassing. This approach takes advantage of language characteristics, whereas the pure Prototype-based approach is language-independent.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101512</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>Like the Prototype-based factory in Smalltalk just discussed, the class-based version will have a single instance variable partCatalog, which is a dictionary whose key is the name of the part. Instead of storing prototypes to be cloned, partCatalog stores the classes of the products. The method make: now looks like this:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101513</identifier>
+                <type>code</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>make: partName &lt;br&gt;  ^ (partCatalog at: partName) new
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101514</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>3. Defining extensible factories. AbstractFactory usually defines a different operation for each kind of product it can produce. The kinds of products are encoded in the operation signatures. Adding a new kind of product requires changing the AbstractFactory interface and all the classes that depend on it. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101515</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Implementation</title>
+                <content>A more flexible but less safe design is to add a parameter to operations that create objects. This parameter specifies the kind of object to be created. It could be a class identifier, an integer, a string, or anything else that identifies the kind of product. In fact with this approach, AbstractFactory only needs a single "Make" operation with a parameter indicating the kind of object to create. This is the technique used in the Prototype- and the class-based abstract factories discussed earlier.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101516</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>This variation is easier to use in a dynamically typed language like Smalltalk than in a statically typed language like C++. You can use it in C++ only when all objects have the same abstract base class or when the product objects can be safely coerced to the correct type by the client that requested them. The implementation section of Factory Method (107) shows how to implement such parameterized operations in C++.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f101517</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Implementation</title>
+                <content>But even when no coercion is needed, an inherent problem remains: All products are returned to the client with the same abstract interface as given by the return type. The client will not be able to differentiate or make safe assumptions about the class of a product. If clients need to perform subclass-specific operations, they won't be accessible through the abstract interface. Although the client could perform a downcast (e.g., with dynamic_cast in C++), that's not always feasible or safe, because the downcast can fail. This is the classic trade-off for a highly flexible and extensible interface.
+
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1016</identifier>
+                <title>Sample Code</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10161</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Sample Code</title>
+                <content>We'll apply the Abstract Factory pattern to creating the mazes we discussed at the beginning of this chapter.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10162</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Sample Code</title>
+                <content>Class MazeFactory can create components of mazes. It builds rooms, walls, and doors between rooms. It might be used by a program that reads plans for mazes from a file and builds the corresponding maze. Or it might be used by a program that builds mazes randomly. Programs that build mazes take a MazeFactory as an argument so that the programmer can specify the classes of rooms, walls, and doors to construct.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10163</identifier>
+                <type>code</type>
+                <detailLevel>2</detailLevel>
+                <title>Sample Code</title>
+                <content>class MazeFactory { &lt;br&gt; public: &lt;br&gt;  MazeFactory(); 
+&lt;br&gt; virtual Maze* MakeMaze() const &lt;br&gt;   { return new Maze; }
+&lt;br&gt;virtual Wall* MakeWall() const
+&lt;br&gt; { return new Wall; }
+&lt;br&gt; virtual Room* MakeRoom(int n) const
+&lt;br&gt;  { return new Room(n); }
+&lt;br&gt; virtual Door* MakeDoor(Room* r1, Room* r2) const
+&lt;br&gt;  { return new Door(r1, r2); }
+
+
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10164</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Sample Code</title>
+                <content>Recall that the member function CreateMaze (page 84) builds a small maze consisting of two rooms with a door between them. CreateMaze hard-codes the class names, making it difficult to create mazes with different components.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10165</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Sample Code</title>
+                <content>Here's a version of CreateMaze that remedies that shortcoming by taking a MazeFactory as a parameter:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10166</identifier>
+                <type>code</type>
+                <detailLevel>2</detailLevel>
+                <title>Sample Code</title>
+                <content>Maze* MazeGame::CreateMaze (MazeFactory factory) {
+&lt;br&gt;         Maze* aMaze = factory.MakeMaze();
+&lt;br&gt;         Room* r1 = factory.MakeRoom(1);
+&lt;br&gt;       Room* r2 = factory.MakeRoom(2);
+&lt;br&gt;        Door* aDoor = factory.MakeDoor(r1, r2);
+&lt;br&gt;
+&lt;br&gt;       aMaze-&gt;AddRoom(r1);
+&lt;br&gt;         aMaze-&gt;AddRoom(r2);
+&lt;br&gt;
+&lt;br&gt;        r1-&gt;SetSide(North, factory.MakeWall());
+&lt;br&gt;        r1-&gt;SetSide(East, aDoor);
+&lt;br&gt;        r1-&gt;SetSide(South, factory.MakeWall());
+&lt;br&gt;         r1-&gt;SetSide(West, factory.MakeWall());
+&lt;br&gt;
+&lt;br&gt;        r2-&gt;SetSide(North, factory.MakeWall());
+&lt;br&gt;         r2-&gt;SetSide(East, factory.MakeWall());
+&lt;br&gt;         r2-&gt;SetSide(South, factory.MakeWall());
+&lt;br&gt;         r2-&gt;SetSide(West, aDoor);
+&lt;br&gt;
+&lt;br&gt;        return aMaze;
+    }
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10167</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Sample Code</title>
+                <content>We can create EnchantedMazeFactory, a factory for enchanted mazes, by subclassing MazeFactory. EnchantedMazeFactory will override different member functions and return different subclasses of Room, Wall, etc.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10168</identifier>
+                <type>code</type>
+                <detailLevel>2</detailLevel>
+                <title>Sample Code</title>
+                <content> class EnchantedMazeFactory : public MazeFactory {
+&lt;br&gt;    public:
+&lt;br&gt;     EnchantedMazeFactory();
+&lt;br&gt;
+&lt;br&gt;         virtual Room* MakeRoom(int n)  const
+&lt;br&gt;                { return new EnchantedRoom(n, CastSpell()); }
+&lt;br&gt;
+&lt;br&gt;        virtual Door* MakeDoor(Room* r1, Room* r2)  const
+&lt;br&gt;        { return new DoorNeedingSpell(r1, r2); }
+&lt;br&gt;  
+&lt;br&gt;    protected:
+&lt;br&gt;      Spell* CastSpell() const;
+&lt;br&gt;    };
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1017</identifier>
+                <title>Known Uses and Related Patterns</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10171</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content>InterViews uses the "Kit" suffix [Lin92] to denote AbstractFactory classes. It defines WidgetKit and DialogKit abstract factories for generating look-and-feel-specific user interface objects. InterViews also includes a LayoutKit that generates different composition objects depending on the layout desired. For example, a layout that is conceptually horizontal may require different composition objects depending on the document's orientation (portrait or landscape).
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10172</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Known Uses</title>
+                <content>ET++ [WGM88] uses the Abstract Factory pattern to achieve portability across different window systems (X Windows and SunView, for example). The WindowSystem abstract base class defines the interface for creating objects that represent window system resources (MakeWindow, MakeFont, MakeColor, for example). Concrete subclasses implement the interfaces for a specific window system. At run-time, ET++ creates an instance of a concrete WindowSystem subclass that creates concrete system resource objects.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10173</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Related Patterns</title>
+                <content>AbstractFactory classes are often implemented with factory methods (Factory Method (107)), but they can also be implemented using Prototype (117).
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10174</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Related Patterns</title>
+                <content>A concrete factory is often a singleton (Singleton (127)). </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10175</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Related Patterns</title>
+                <content> Builder
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10176</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Related Patterns</title>
+                <content> Creational Patterns </content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1011</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>What is intent of Abstract Factory pattern?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Define an interface for creating an object, but let subclasses decidentifiere which class to instantiate.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>It providentifiere an interface for creating families of related or dependent objects without specifying their concrete classes.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Separate the construction of a complex object from its representation so that the same construction process can create different representations.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1012</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1014</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>In which case you will use Abstract Factory pattern?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>The construction process must allow different representations for the objects that's constructed.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>You want to providentifiere a class library of products, and you want to reveal just their interfaces, not their implementations.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Classes delegate responsibility to one of several helper subclasses, and you want to localize the knowledge of which helper subclass is the delegate.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1013</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1013</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>What is the role of AbstractProduct participant?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Declares an interface for operations that create abstract product objects.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Implements the AbstractProduct interface.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Declares an interface for a type of product object.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1014</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1017</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>What are the most related patterns to Abstract Factory pattern?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Prototype, Composite, Singleton.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Factory Method, Adapter, Bridentifierge.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Factory Method, Prototype, Singleton.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1015</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1015</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>How can the Abstract factory classes be implemented?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>They are often implemented with singleton methods, but they can also be implemented using Adapter.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>They are often implemented with factory methods, but they can also be implemented using Prototype.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>They are often implemented with factory methods, but they can also be implemented using Adapter.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1016</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>What is the other name of Abstract Factory pattern?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Kit</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Creator</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Product</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1017</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1017</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>What are the known uses of Abstract Factory?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>InterViews uses the "Kit" suffix to denote AbstractFactory classes.&lt;br&gt; ET++ extends the Abstract Factory pattern in that the WindowPort keeps a reference back to the Window.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>InterViews uses the "Kit" suffix to denote AbstractFactory classes.&lt;br&gt; ET++ uses the Abstract Factory pattern to providentifiere a point-and-click interface to different line-oriented debuggers. </textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>InterViews uses the "Kit" suffix to denote AbstractFactory classes.&lt;br&gt; ET++ uses the Abstract Factory pattern to achieve portability across different window systems.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1018</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1015</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>Choose one of the following statment that best describe the benefits and liabilities of Abstract Factory pattern.</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>It isolates concrete classes.&lt;br&gt; It lets you vary a product's internal representation. .&lt;br&gt; It isolates code for construction and representation.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>It gives you finer control over the construction process. .&lt;br&gt; It lets you vary a product's internal representation..&lt;br&gt;It promotes consistency among products. .&lt;br&gt; Supporting new kinds of products in difficult.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>It isolates concrete classes.&lt;br&gt; It makes exchanging product families easy.&lt;br&gt; It promotes consistency among products.&lt;br&gt; Supporting new kind of products is difficult.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1019</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1013</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>What is the motivation of Abstract Factory pattern?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Separate the construction of a complex object from its representation so that the same construction process can create different representations. 
+</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>To provide an interface for creating families of related or dependent objects without specifying their concrete classes.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses. 
+</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10110</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1017</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>Select one of the statements that is true?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>An application typically needs only one instance of a Concrete Factory per product family. </textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>An application typically needs two instances of a ConcreteFactory per product family.</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>An application typically needs more than two instances of a ConcreteFactory per product family.</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10111</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question example group 1 diff 1</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>answer 1	</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>answer 2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>answer 3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>answer 4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10112</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 2</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>answer 1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>answer 2 t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>answer 3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>answer 4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10113</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a 1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a 2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10114</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 4</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a 1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10115</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff </Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10116</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1014</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10117</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1014</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10118</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1014</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10119</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1015</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q101110</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1016</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q101111</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1015</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 5</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q101112</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1016</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>question group 5 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q101113</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1017</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>question group 5 diff 5</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c102</identifier>
+            <title>Builder</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1021</identifier>
+                <title>Introduction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10211</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Intent</title>
+                <content>Separate the construction of a complex object from its representation so that the same construction process can create different representations.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10212</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Motivation</title>
+                <content>A reader for the RTF (Rich Text Format) document exchange format should be able to convert RTF to many text formats. The reader might convert RTF documents into plain ASCII text or into a text widget that can be edited interactively. The problem, however, is that the number of possible conversions is open-ended. So it should be easy to add a new conversion without modifying the reader.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10213</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Motivation</title>
+                <content>A solution is to configure the RTFReader class with a TextConverter object that converts RTF to another textual representation. As the RTFReader parses the RTF document, it uses the TextConverter to perform the conversion. Whenever the RTFReader recognizes an RTF token (either plain text or an RTF control word), it issues a request to the TextConverter to convert the token. TextConverter objects are responsible both for performing the data conversion and for representing the token in a particular format.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10214</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Motivation</title>
+                <content>Subclasses of TextConverter specialize in different conversions and formats. For example, an ASCIIConverter ignores requests to convert anything except plain text. A TeXConverter, on the other hand, will implement operations for all requests in order to produce a TeX representation that captures all the stylistic information in the text. A TextWidgetConverter will produce a complex user interface object that lets the user see and edit the text.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10215</identifier>
+                <type>picture_middle</type>
+                <detailLevel>2</detailLevel>
+                <title>Motivation</title>
+                <content>Builder_01</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10216</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Motivation</title>
+                <content>Each kind of converter class takes the mechanism for creating and assembling a complex object and puts it behind an abstract interface. The converter is separate from the reader, which is responsible for parsing an RTF document.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10217</identifier>
+                <type>part-of</type>
+                <detailLevel>3</detailLevel>
+                <title>Motivation</title>
+                <content>The Builder pattern captures all these relationships. Each converter class is called a builder in the pattern, and the reader is called the director. Applied to this example, the Builder pattern separates the algorithm for interpreting a textual format (that is, the parser for RTF documents) from how a converted format gets created and represented. This lets us reuse the RTFReader's parsing algorithm to create different text representations from RTF documents?just configure the RTFReader with different subclasses of TextConverter.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10218</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Applicability</title>
+                <content>Use the Builder pattern when:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10219</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Applicability</title>
+                <content>the algorithm for creating a complex object should be independent of the parts that make up the object and how they're assembled.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102110</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Applicability</title>
+                <content>the construction process must allow different representations for the object that's constructed.</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1022</identifier>
+                <title>Structure</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10221</identifier>
+                <type>picture_small</type>
+                <detailLevel>1</detailLevel>
+                <title>Structure</title>
+                <content>Builder_02</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1023</identifier>
+                <title>Participants and Collaborations</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10230</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content> </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10231</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content> Builder (TextConverter) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10232</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>specifies an abstract interface for creating parts of a Product object. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10233</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>ConcreteBuilder (ASCIIConverter, TeXConverter, TextWidgetConverter) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10234</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>constructs and assembles parts of the product by implementing the Builder interface. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10235</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>defines and keeps track of the representation it creates. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10236</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>provides an interface for retrieving the product (e.g., GetASCIIText, GetTextWidget). 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10237</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>Director (RTFReader) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10238</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>constructs an object using the Builder interface. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10239</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Participants</title>
+                <content>Product (ASCIIText, TeXText, TextWidget) </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102310</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>represents the complex object under construction. ConcreteBuilder builds the product's internal representation and defines the process by which it's assembled. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102311</identifier>
+                <type>list2</type>
+                <detailLevel>2</detailLevel>
+                <title>Participants</title>
+                <content>includes classes that define the constituent parts, including interfaces for assembling the parts into the final result. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102312</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaboration</title>
+                <content> </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102313</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaboration</title>
+                <content>The client creates the Director object and configures it with the desired Builder object. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102314</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaboration</title>
+                <content>Director notifies the builder whenever a part of the product should be built. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102315</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaboration</title>
+                <content>Builder handles requests from the director and adds parts to the product. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102316</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Collaboration</title>
+                <content>The client retrieves the product from the builder. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102317</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Collaboration</title>
+                <content>The following interaction diagram illustrates how Builder and Director cooperate with a client.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f102318</identifier>
+                <type>picture_middle</type>
+                <detailLevel>2</detailLevel>
+                <title>Collaboration</title>
+                <content>Builder_03</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1024</identifier>
+                <title>Consequences</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10241</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content> Here are key consequences of the Builder pattern:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10242</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>1. It lets you vary a product's internal representation. The Builder object provides the director with an abstract interface for constructing the product. The interface lets the builder hide the representation and internal structure of the product. It also hides how the product gets assembled. Because the product is constructed through an abstract interface, all you have to do to change the product's internal representation is define a new kind of builder. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10243</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>2. It isolates code for construction and representation. The Builder pattern improves modularity by encapsulating the way a complex object is constructed and represented. Clients needn't know anything about the classes that define the product's internal structure; such classes don't appear in Builder's interface. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10244</identifier>
+                <type>part-of</type>
+                <detailLevel>2</detailLevel>
+                <title>Consequences</title>
+                <content>Each ConcreteBuilder contains all the code to create and assemble a particular kind of product. The code is written once; then different Directors can reuse it to build Product variants from the same set of parts. In the earlier RTF example, we could define a reader for a format other than RTF, say, an SGMLReader, and use the same TextConverters to generate ASCIIText, TeXText, and TextWidget renditions of SGML documents. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10245</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Consequences</title>
+                <content>3. It gives you finer control over the construction process. Unlike creational patterns that construct products in one shot, the Builder pattern constructs the product step by step under the director's control. Only when the product is finished does the director retrieve it from the builder. Hence the Builder interface reflects the process of constructing the product more than other creational patterns. This gives you finer control over the construction process and consequently the internal structure of the resulting product. 
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1025</identifier>
+                <title>Implementation</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10251</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content> Typically there's an abstract Builder class that defines an operation for each component that a director may ask it to create. The operations do nothing by default. A ConcreteBuilder class overrides operations for components it's interested in creating.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10252</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>Here are other implementation issues to consider:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10253</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>1. Assembly and construction interface. Builders construct their products in step-by-step fashion. Therefore the Builder class interface must be general enough to allow the construction of products for all kinds of concrete builders. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10254</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>A key design issue concerns the model for the construction and assembly process. A model where the results of construction requests are simply appended to the product is usually sufficient. In the RTF example, the builder converts and appends the next token to the text it has converted so far.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10255</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>But sometimes you might need access to parts of the product constructed earlier. In the Maze example we present in the Sample Code, the MazeBuilder interface lets you add a door between existing rooms. Tree structures such as parse trees that are built bottom-up are another example. In that case, the builder would return child nodes to the director, which then would pass them back to the builder to build the parent nodes.</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10256</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>2. Why no abstract class for products? In the common case, the products produced by the concrete builders differ so greatly in their representation that there is little to gain from giving different products a common parent class. In the RTF example, the ASCIIText and the TextWidget objects are unlikely to have a common interface, nor do they need one. Because the client usually configures the director with the proper concrete builder, the client is in a position to know which concrete subclass of Builder is in use and can handle its products accordingly. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10257</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Implementation</title>
+                <content>Empty methods as default in Builder. In C++, the build methods are intentionally not declared pure virtual member functions. They're defined as empty methods instead, letting clients override only the operations they're interested in. 
+</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1026</identifier>
+                <title>Sample Code</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10261</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1027</identifier>
+                <title>Known Uses and Related Patterns</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10271</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content> The RTF converter application is from ET++ [WGM88]. Its text building block uses a builder to process text stored in the RTF format.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10272</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content>Builder is a common pattern in Smalltalk-80 [Par90]:
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10273</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content>The Parser class in the compiler subsystem is a Director that takes a ProgramNodeBuilder object as an argument. A Parser object notifies its ProgramNodeBuilder object each time it recognizes a syntactic construct. When the parser is done, it asks the builder for the parse tree it built and returns it to the client. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10274</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content>ClassBuilder is a builder that Classes use to create subclasses for themselves. In this case a Class is both the Director and the Product. </content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10275</identifier>
+                <type>list</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content>ByteCodeStream is a builder that creates a compiled method as a byte array. ByteCodeStream is a nonstandard use of the Builder pattern, because the complex object it builds is encoded as a byte array, not as a normal Smalltalk object. But the interface to ByteCodeStream is typical of a builder, and it would be easy to replace ByteCodeStream with a different class that represented programs as a composite object. 
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10276</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Known Uses</title>
+                <content>The Service Configurator framework from the Adaptive Communications Environment uses a builder to construct network service components that are linked into a server at run-time [SS94]. The components are described with a configuration language that's parsed by an LALR(1) parser. The semantic actions of the parser perform operations on the builder that add information to the service component. In this case, the parser is the Director.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10277</identifier>
+                <type>first</type>
+                <detailLevel>1</detailLevel>
+                <title>Related Patterns</title>
+                <content>Abstract Factory (87) is similar to Builder in that it too may construct complex objects. The primary difference is that the Builder pattern focuses on constructing a complex object step by step. Abstract Factory's emphasis is on families of product objects (either simple or complex). Builder returns the product as a final step, but as far as the Abstract Factory pattern is concerned, the product gets returned immediately.
+
+</content>
+            </Fragment>
+            <Fragment>
+                <identifier>f10278</identifier>
+                <type>part-of</type>
+                <detailLevel>1</detailLevel>
+                <title>Related Patterns</title>
+                <content>A Composite (163) is what the builder often builds.
+
+</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1021</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question 1?	</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Answer 1 (true)</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Answer 2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Answer 3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1022</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1023</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1022</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1024</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1023</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1025</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1025</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction	</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1026</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1027</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1022</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1028</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1023</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1029</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1024</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10210</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1027</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10211</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1026</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>Under the construction?</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10213</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10212</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10214</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 4</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10215</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>question group 1 diff 5</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10217</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1022</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10218</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1022</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a4t</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10216</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1022</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10219</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1023</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 2</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10220</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1023</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 3</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10221</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1023</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 5</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10222</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1025</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10223</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1024</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10224</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1026</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>question group  diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10225</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1026</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>question group 5 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c103</identifier>
+            <title>Factory Method</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1031</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10311</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1032</identifier>
+                <title>under the construction</title>
+                <difficultyLevel>2</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10321</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>fragment</title>
+                <content>fff</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1033</identifier>
+                <title>under the construction</title>
+                <difficultyLevel>2</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10331</identifier>
+                <type>whole</type>
+                <detailLevel>2</detailLevel>
+                <title>fragment</title>
+                <content>fff</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1034</identifier>
+                <title>under the construction</title>
+                <difficultyLevel>3</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10341</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>fragment</title>
+                <content>fff</content>
+            </Fragment>
+        </Unit>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1035</identifier>
+                <title>under the construction</title>
+                <difficultyLevel>2</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10351</identifier>
+                <type>whole</type>
+                <detailLevel>2</detailLevel>
+                <title>fragment</title>
+                <content>ggg</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1031</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1032</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1033</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1034</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1035</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1036</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>Under the construction</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>Under the construction</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1037</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1032</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>queastion group 2 diff 1</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1038</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1032</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 2</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10310</identifier>
+                <difficultyLevel>3</difficultyLevel>
+                <related-to>u1032</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 3</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10311</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1032</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10312</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1033</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 2</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1039</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1033</related-to>
+                <group>2</group>
+            </testGeneralInformation>
+            <Question>question group 2 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10313</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1033</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10314</identifier>
+                <difficultyLevel>5</difficultyLevel>
+                <related-to>u1033</related-to>
+                <group>3</group>
+            </testGeneralInformation>
+            <Question>question group 3 diff 5</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10315</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1034</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 2</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10316</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1034</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 4</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a4</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10317</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1034</related-to>
+                <group>4</group>
+            </testGeneralInformation>
+            <Question>question group 4 diff 4</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10318</identifier>
+                <difficultyLevel>2</difficultyLevel>
+                <related-to>u1035</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>question group 5 diff 2</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1t</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q10319</identifier>
+                <difficultyLevel>4</difficultyLevel>
+                <related-to>u1035</related-to>
+                <group>5</group>
+            </testGeneralInformation>
+            <Question>question group 5 diff 4</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3t</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c104</identifier>
+            <title>Prototype</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1041</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10411</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1041</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1041</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c105</identifier>
+            <title>Singleton</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u1051</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f10511</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q1051</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u1051</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c201</identifier>
+            <title>Adapter</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2011</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20111</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2011</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c202</identifier>
+            <title>Bridge</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2021</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20211</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2021</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c203</identifier>
+            <title>Composite</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2031</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20311</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2031</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c204</identifier>
+            <title>Decorator</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2041</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20411</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2041</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2041</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c205</identifier>
+            <title>Facade</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2051</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20511</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2051</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2051</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c206</identifier>
+            <title>Flyweight</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2061</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20611</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2061</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2061</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c207</identifier>
+            <title>Proxy</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u2071</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f20711</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q2071</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u2071</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c301</identifier>
+            <title>Chain of Responsibility</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3011</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30111</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3011</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3011</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c302</identifier>
+            <title>Command</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3021</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30211</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3021</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3021</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c303</identifier>
+            <title>Interpreter</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3031</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30311</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3031</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3031</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c304</identifier>
+            <title>Iterator</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3041</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30411</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3041</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3041</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c305</identifier>
+            <title>Mediator</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3051</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f3051</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content>  </content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3051</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3051</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c306</identifier>
+            <title>Memento</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3061</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30611</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3061</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3061</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c307</identifier>
+            <title>Observer</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3071</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30711</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3071</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3071</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c308</identifier>
+            <title>State</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3081</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30811</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3081</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3081</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c309</identifier>
+            <title>Strategy</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3091</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f30911</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3091</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3091</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c310</identifier>
+            <title>Template Method</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3101</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f31011</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3101</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3101</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+    <Concept>
+        <conceptGeneralInformation>
+            <identifier>c311</identifier>
+            <title>Visitor</title>
+        </conceptGeneralInformation>
+        <Unit>
+            <unitGeneralInformation>
+                <identifier>u3111</identifier>
+                <title>Under the construction</title>
+                <difficultyLevel>1</difficultyLevel>
+            </unitGeneralInformation>
+            <Fragment>
+                <identifier>f31111</identifier>
+                <type>whole</type>
+                <detailLevel>1</detailLevel>
+                <title>Under the construction</title>
+                <content> Some content should be added here!</content>
+            </Fragment>
+        </Unit>
+        <Questionare>
+            <testGeneralInformation>
+                <identifier>q3111</identifier>
+                <difficultyLevel>1</difficultyLevel>
+                <related-to>u3111</related-to>
+                <group>1</group>
+            </testGeneralInformation>
+            <Question>q1</Question>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a1</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>false</truth>
+                <textOfAnswer>a2</textOfAnswer>
+            </Answer>
+            <Answer>
+                <truth>true</truth>
+                <textOfAnswer>a3</textOfAnswer>
+            </Answer>
+        </Questionare>
+    </Concept>
+</Course>

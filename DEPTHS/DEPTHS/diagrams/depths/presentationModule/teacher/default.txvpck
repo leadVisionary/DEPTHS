@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="Vuobnmjen89yep37m2nu4">
+        <property name="$defaultDiagram" value="true"/>
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="$defaultDiagram" value=""/>
+        <property name="@__options" value="toolbar.group.#DEFAULT.expanded = true &#xA;toolbar.buttonRunCount = 2 &#xA;option.layout.recursive = false &#xA;toolbar.group.pattern.expanded = true &#xA;toolbar.group.ocl.expanded = true &#xA;toolbar.group.note.expanded = true &#xA;scrollX = 0 &#xA;scrollY = 0 &#xA;zoomFactor = 1.0 &#xA;"/>
+        <reference referencedUin="jdt:e_class:src:depths.presentationModule.teacher.TeacherBean">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="20,20,200,907"/>
+        </reference>
+    </view>
+</nodeSet>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2005 sp1 U (http://www.xmlspy.com) by any (Ru-Board) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jeremic Zoran (nn) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="difficultyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="very easy"/>
+			<xs:enumeration value="easy"/>
+			<xs:enumeration value="medium"/>
+			<xs:enumeration value="difficult"/>
+			<xs:enumeration value="very difficult"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="Course">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Concept" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="conceptGeneralInformation">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="identifier" type="xs:ID"/>
+										<xs:element name="title" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Unit" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="unitGeneralInformation">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="identifier" type="xs:ID"/>
+													<xs:element name="title" type="xs:string"/>
+													<xs:element name="difficultyLevel" type="xs:integer"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Fragment" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="identifier" type="xs:ID"/>
+													<xs:element name="type" type="xs:string"/>
+													<xs:element name="detailLevel" type="xs:integer"/>
+													<xs:element name="title" type="xs:string"/>
+													<xs:element name="content" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Questionare" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="testGeneralInformation">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="identifier" type="xs:ID"/>
+													<xs:element name="difficultyLevel" type="xs:integer"/>
+													<xs:element name="related-to" type="xs:IDREF"/>
+													<xs:element name="group" type="xs:integer"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Question" type="xs:string"/>
+										<xs:element name="Answer" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="truth" type="xs:boolean"/>
+													<xs:element name="textOfAnswer" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

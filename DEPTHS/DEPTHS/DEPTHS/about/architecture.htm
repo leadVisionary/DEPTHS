@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Design Patterns Teaching Help System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style2 {font-size: 12px}
+.style3 {font-size: 12px; font-weight: bold; }
+-->
+</style>
+</head>
+<body bgcolor="#999999" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td style="padding-left:25px" bgcolor="#5678BB" class="logo" height="75" background="images/bg.jpg">
+      DEPTHS - DEsign Patterns Teaching Help System</td>
+  </tr>
+  <tr>
+    <td height="22" colspan="2" bgcolor="#999999">
+      <table width="100%" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td height="22" bgcolor="#AEC3E5" class="text" align="center"> <a href="index.html">Home</a>
+            | <a href="architecture.htm">DEPTHS description</a> | <a href="requirementPage.htm">Requirements</a> | <a href="http://goodoldai.org.yu/">GOOD-OLD-AI</a>
+            | <a href="homepage.htm">About author </a> | <a href="links.htm">Links</a> | <a href="main.html">TRY IT
+            </a> | <a href="mailto:jeremycod@yahoo.com">Contact Us</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table width="780" cellspacing="0" cellpadding="0" border="0" align="center">
+  <tr>
+    <td bgcolor="#CCCCCC" height="250" valign="top" width="180">
+      <table width="100%" cellspacing="0" cellpadding="8" border="0">
+        <tr>
+          <td height="180" class="text">
+            <p><b>DEPTHS News<br>
+              <br>
+              </b>Current version of DEPTHS is 1.1.0. It is available now for trial.</p>
+            <p>Updated: october 20, 2005. </p>
+            <p>&nbsp;</p>
+          <p><b>DEPTHS description </b></p></td>
+        </tr>
+		<tr>
+		  <td>
+		  <table>
+		  <tr>
+		  <td><a href="#">DEPTHS architecture</a>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td>
+		  <a href="student_modeling.htm">Student modeling</a></td>
+		  </tr>
+		  <tr>
+		  <td>
+		  <a href="curriculum_sequencing.htm">Curriculum sequencing</a></td>
+		  </tr>
+		  <tr>
+		    <td><a href="course_org_delivery.htm">Course material organization and delivery</a></td>
+		    </tr>
+
+		  </table>		  </td>
+	    </tr>
+		<tr>
+		  <td> <dl>
+		    <dt>&nbsp;</dt>
+		    </dl>
+		    <p>&nbsp;</p>
+	      <p>&nbsp;</p> <p>&nbsp;</p></td>
+		</tr>
+		<tr>
+		<td><a href="http://goodoldai.org.yu/"><img src="images/good-old-ai-logo.gif" width="160" height="44"></a></td>
+		</tr>
+      </table>
+
+    </td>
+    <td bgcolor="#eeeeee" valign="top">
+      <table width="100%" cellspacing="10" cellpadding="0" align="center" border="0">
+        <tr>
+          <td valign="top" class="text"><img src="images/main6.jpg" width="580" height="89"></td>
+        </tr>
+        <tr>
+          <td valign="top" class="text">
+            <p><span class="title">Welcome to DEPTHS Website!</span></p>
+            <p class="style3">DEPTHS architecture</p>
+            <p align="justify">Figure 1 depicts system's architecture. System basic components are: Pedagogical model, Expert model, Student model, Domain model, Coordinator and GUI. </p>
+            <p align="justify">Pedagogical model -The pedagogical model provides the knowledge infrastructure in order to tailor presentation of the teaching material accordint to the user model. In a specific learning session, the pedagogical model must perform the following tasks: (1) select a concept to teach, (2) select a teaching method, (3) select the course unit to be presented, (4) evaluate the user's perfomance (5) provide a feedback to the student [<a href="links.htm#ref">1</a>]. </p>
+            <p align="justify">Expert model – Expert model deploys Jess (Java Expert System Shell) as a rule-based inference engine. Jess has capacity to “reason” using knowledge that is supplied in the form of declarative rules. Jess uses the Rete algorithm to process rules. When rules are examined by the inference engine, actions are executed if the information supplied by the pedagogical model satisfies the conditions in the rules. Pedagogical model uses these actions for making decisions in curriculum sequencing and evaluating student model. </p>
+            <p align="justify">Domain model - Domain model contains knowledge regarding the subject being taught as well as the actual teaching material. A course is constructed by creating instances of ontology classes and setting relations between instances, building semantic networks of concepts, units, fragments and tests. Ontology classes and instances are described textually in a XML document [<a href="links.htm#ref">2</a>]. </p>
+            <p align="justify">Coordinator – Coordinator has the role to control the functionality of the whole system. It interacts with the other components of the ITS calling the inference engine of the expert model whenever it is necessary. All communications between components in the system depends on this component. It also provides multiuser session. </p>
+            <p align="center"><img width="278" height="233" src="images/architecture.jpg"></p>
+            <p align="center"><strong>Figure 1. </strong>Architecture of the system - basic system components and their relations </p>
+            <p align="justify">GUI – Student interact with the system by using Web browser. Course unit presentations are defined by creating a common template for each class of the ontology (concept, unit, fragment, test). Templates are defined using a textual language based on JavaServer Pages, that allows insertion of the parts of the choosen course unit into HTML code. Student interaction with the system is implemented by using HTTP protocol. System uses HTML compatible Web browser on the client side, and Tomcat 4.0 Web Server as JSP container on the server side. </p>            <p align="justify">&nbsp;</p>
+            <table width="100%">
+			<tr>
+			<td width="50%">&nbsp;			</td>
+			<td>
+			  <div align="right"><span class="text"><a href="student_modeling.htm" class="text">Student modeling >> </a></span></div></td>
+			</tr>
+			</table>
+			<p><span class="text">
+		  &nbsp;</span></p>
+			<p>
+	            <a href="main.html" target="_blank"><img src="images/logo.jpg" width="468" height="60" border="0" vspace="2"></a></p></td>
+        </tr></table>
+    </td>
+  </tr></table>
+  <table width="780" cellspacing="0" cellpadding="0" height="40" border="0" align="center">
+  <tr>
+    <td bgcolor="#AEC3E5" height="24" class="text" align="center"> Copyright &copy;
+      2005 FON - School of Business Administration,  Belgrade. All rights reserved. Designed by <a href="mailto:jeremycod@email.com" target="_blank">Jeremic Zoran</a></td>
+  </tr>
+</table>
+
+</body></html>
